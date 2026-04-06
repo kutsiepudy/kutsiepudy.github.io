@@ -14,17 +14,15 @@
     </div>
 
     <div class="buttons">
-      <button onclick="previousTrack()">Prev</button>
-      <button id="play-pause" onclick="playPauseTrack()">Play</button>
-      <button onclick="nextTrack()">Next</button>
+      <button onclick="previousTrack()">⏮</button>
+      <button id="play-pause" onclick="playPauseTrack()">▶︎</button>
+      <button onclick="nextTrack()">⏭</button>
     </div>
 
     <div class="sliders">
       <input type="range" min="0" max="100" value="0" class="seek_slider" onchange="seekTo()">
       <input type="range" min="0" max="100" value="100" class="volume_slider" onchange="setVolume()">
     </div>
-
-    <!-- Main audio element -->
     <audio id="main-audio" src="ThisCharmingMan.mp3"></audio>
   </div>
   <script src="script.js"></script>
