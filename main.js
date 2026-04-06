@@ -59,8 +59,6 @@ function nextTrack() {
   }
   
   loadTrack(trackIndex);
-  pauseTrack();
-}
 
 function previousTrack() {
   trackIndex--;
@@ -70,7 +68,6 @@ function previousTrack() {
   }
 
   loadTrack(trackIndex);
-  pauseTrack();
 }
 
 function seekTo() {
