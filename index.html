@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
   <title>Custom Music Player</title>
 </head>
 <body>
@@ -12,6 +11,7 @@
       <div class="track-name">This Charming Man</div>
       <div class="track-artist">The Smiths</div>
       <div class="release-date">1983</div>
+      <div class="description">An Upbeat song about two different people</div>
     </div>
 
     <div class="buttons">
@@ -24,6 +24,8 @@
       <input type="range" min="0" max="100" value="0" class="seek_slider" onchange="seekTo()">
       <input type="range" min="0" max="100" value="100" class="volume_slider" onchange="setVolume()">
     </div>
+
+    <!-- Main audio element -->
     <audio id="main-audio" src="ThisCharmingMan.mp3"></audio>
   </div>
   <script src="main.js"></script>
