@@ -7,16 +7,16 @@ let dateRelease = document.querySelector(".release-date")
 let songDesc = document.querySelector(".description")
 let trackIndex = 0;
 const availableSongs = [
-  {artist: "The Smiths", track: "This Charming Man", date: "1983", file: "ThisCharmingMan.mp3", desc: "An upbeat song about two different people."},
-  {artist: "Nirvana", track: "About a Girl", date: "1989", file: "AboutAGirl.mp3", desc: "A soft but hearty song."},
-  {artist: "Mac Demarco", track: "No Other Heart", date: "2015", file: "NoOtherHeart.mp3", desc: "depression and heartbreak"},
-  {artist: "Good Kid", track: "Cicada", date: "2026", file: "04-cicada.mp3", desc: "A song about a crush, ironically this was released the day i got cheated on."},
-  {artist: "overnight", track: "mirrors demo", date: "2025", file: "mirrordemo.mp3", desc: "A song about self hate"},
-  {artist: "Kurt Cobain", track: "Do Re Mi", date: "1994", file: "DoReMi.mp3", desc: "One of Kurts first ever songs he recorded."},
-  {artist: "The Pillows", track: "Last Dinosaur", date: "1999", file: "Last Dinosaur.mp3", desc: "I dont speak japanese"},
-  {artist: "Good Kid", track: "Coffee", date: "2026", file: "03-coffee.mp3", desc: "Miscommunication and stress"},
-  {artist: "Good Kid", track: "Rift", date: "2026", file: "01-rift.mp3", desc: "escaping a toxic relationship (relateable)."},
-  {artist: "Kurt Cobain", track: "Montage of Kurt", date: "1988", file: "goofykurtsong.mp3", desc: "dont ask"}
+  {artist: "The Smiths", track: "This Charming Man", date: "1983", file: "/Songs/ThisCharmingMan.mp3", desc: "An upbeat song about two different people."},
+  {artist: "Nirvana", track: "About a Girl", date: "1989", file: "/Songs/AboutAGirl.mp3", desc: "A soft but hearty song."},
+  {artist: "Mac Demarco", track: "No Other Heart", date: "2015", file: "/Songs/NoOtherHeart.mp3", desc: "depression and heartbreak"},
+  {artist: "Good Kid", track: "Cicada", date: "2026", file: "/Songs/04-cicada.mp3", desc: "A song about a crush, ironically this was released the day i got cheated on."},
+  {artist: "overnight", track: "mirrors demo", date: "2025", file: "/Songs/mirrordemo.mp3", desc: "A song about self hate"},
+  {artist: "Kurt Cobain", track: "Do Re Mi", date: "1994", file: "/Songs/DoReMi.mp3", desc: "One of Kurts first ever songs he recorded."},
+  {artist: "The Pillows", track: "Last Dinosaur", date: "1999", file: "/Songs/Last Dinosaur.mp3", desc: "I dont speak japanese"},
+  {artist: "Good Kid", track: "Coffee", date: "2026", file: "/Songs/03-coffee.mp3", desc: "Miscommunication and stress"},
+  {artist: "Good Kid", track: "Rift", date: "2026", file: "/Songs/01-rift.mp3", desc: "escaping a toxic relationship (relateable)."},
+  {artist: "Kurt Cobain", track: "Montage of Kurt", date: "1988", file: "/Songs/goofykurtsong.mp3", desc: "dont ask"}
 ]
 
 function loadTrack(index) {
