@@ -13,6 +13,8 @@ const availableSongs = [
   {artist: "overnight", track: "mirrors demo", date: "2025", file: "mirrordemo.mp3"},
   {artist: "Kurt Cobain", track: "Do Re Mi", date: "1994", file: "DoReMi.mp3"},
   {artist: "Hyakkei", track: "まほうのじゅうたん", date: "2009", file: "japaneseSong.mp3"},
+  {artist: "Good Kid", track: "Coffee", date: "2026", file: "coffee.mp3"},
+  {artist: "Good Kid", track: "Rift", date: "2026", file: "rift.mp3"},
   {artist: "Kurt Cobain", track: "Montage of Kurt", date: "1988", file: "goofykurtsong.mp3"}
 ]
 
@@ -32,14 +34,14 @@ function playPauseTrack() {
 function playTrack() {
   loadTrack(trackIndex);
   playing = true;
-  button.textContent = "Pause";
+  button.textContent = "❚❚";
   audio.play()
 }
 
 function pauseTrack() {
   playing = false;
   audio.pause();
-  button.textContent = "Play";
+  button.textContent = "▶︎";
 }
 
 function setVolume() {
