@@ -84,5 +84,3 @@ audio.addEventListener("timeupdate", () => {
 });
 
 loadTrack(trackIndex);
-
-loadTrack(trackIndex);
