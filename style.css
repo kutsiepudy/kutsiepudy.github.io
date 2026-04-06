@@ -43,6 +43,12 @@ body {
   color: #000;
 }
 
+.description {
+  font-weight: bold;
+  font-size: 16px;
+  color: #000;
+}
+
 .track-artist,
 .release-date {
   font-size: 13px;
