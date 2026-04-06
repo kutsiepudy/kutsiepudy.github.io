@@ -13,7 +13,7 @@ const availableSongs = [
   {artist: "Good Kid", track: "Cicada", date: "2026", file: "04-cicada.mp3", desc: "A song about a crush, ironically this was released the day i got cheated on."},
   {artist: "overnight", track: "mirrors demo", date: "2025", file: "mirrordemo.mp3", desc: "A song about self hate"},
   {artist: "Kurt Cobain", track: "Do Re Mi", date: "1994", file: "DoReMi.mp3", desc: "One of Kurts first ever songs he recorded."},
-  {artist: "Hyakkei", track: "まほうのじゅうたん", date: "2009", file: "japaneseSong.mp3", desc: "I dont speak japanese"},
+  {artist: "The Pillows", track: "Last Dinosaur", date: "2009", file: "Last Dinosaur.mp3", desc: "I dont speak japanese"},
   {artist: "Good Kid", track: "Coffee", date: "2026", file: "03-coffee.mp3", desc: "Miscommunication and stress"},
   {artist: "Good Kid", track: "Rift", date: "2026", file: "01-rift.mp3", desc: "escaping a toxic relationship (relateable)."},
   {artist: "Kurt Cobain", track: "Montage of Kurt", date: "1988", file: "goofykurtsong.mp3", desc: "dont ask"}
