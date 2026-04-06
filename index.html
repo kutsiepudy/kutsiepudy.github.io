@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="stylesheet" href="style.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Custom Music Player</title>
@@ -24,8 +25,6 @@
       <input type="range" min="0" max="100" value="0" class="seek_slider" onchange="seekTo()">
       <input type="range" min="0" max="100" value="100" class="volume_slider" onchange="setVolume()">
     </div>
-
-    <!-- Main audio element -->
     <audio id="main-audio" src="ThisCharmingMan.mp3"></audio>
   </div>
   <script src="main.js"></script>
