@@ -34,7 +34,6 @@ function playPauseTrack() {
 }
 
 function playTrack() {
-  loadTrack(trackIndex);
   playing = true;
   button.textContent = "❚❚";
   audio.play()
