@@ -17,6 +17,7 @@ const availableSongs = [
   {artist: "Good Kid", track: "Coffee", date: "2026", file: "03-coffee.mp3", desc: "Burnout and stress while navigating isolation and anxiety while looking for verbal communication"},
   {artist: "Good Kid", track: "Rift", date: "2026", file: "01-rift.mp3", desc: "escaping a toxic relationship and feeling free from conflict(relateable)."},
   {artist: "Sunny Day Service", track: "心に雲を持つ少年", date: "2020", file: "心に雲を持つ少年.mp3", desc: "I dont speak Japanese"},
+  {artist: "Franz Liszt", track: "Liebestraum No. 3", date: "1850", file: "Liszt - Liebestraum No. 3 (Love Dream).mp3", desc: "love"},
   {artist: "Kurt Cobain", track: "Montage of Kurt", date: "1988", file: "goofykurtsong.mp3", desc: "dont ask"}
 ]
 
