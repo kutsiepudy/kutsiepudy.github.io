@@ -1,6 +1,8 @@
 let audio = document.getElementById("main-audio")
 let button = document.getElementById("play-pause")
 let playing = false;
+let volumeSlider = document.querySelector(".volume_slider")
+let seekSlider = document.querySelector(".seek_slider")
 let trackName = document.querySelector(".track-name")
 let artistName = document.querySelector(".track-artist")
 let dateRelease = document.querySelector(".release-date")
@@ -27,8 +29,12 @@ function loadTrack(index) {
   
   trackName.textContent = song.track
   artistName.textContent = song.artist
-  dateRelease.textContent = song.date || "Unkown"
+  dateRelease.textContent = song.date || "Unknown"
   songDesc.textContent = song.desc || "I dont know"
+
+  seekSlider.value = 0
+  playing = false
+  button.textContent = "▶︎"
 }
 function playPauseTrack() {
   if (!playing) playTrack();
@@ -38,18 +44,16 @@ function playPauseTrack() {
 function playTrack() {
   playing = true;
   button.textContent = "❚❚";
-  audio.play()
+  audio.play().catch(err => {
+    alert("Failed to load song check console for error")
+    console.log(err)
+  });
 }
 
 function pauseTrack() {
   playing = false;
   audio.pause();
   button.textContent = "▶︎";
-}
-
-function setVolume() {
-  let slider = document.querySelector(".volume_slider");
-  audio.volume = slider.value / 100;
 }
 
 function nextTrack() {
@@ -60,7 +64,7 @@ function nextTrack() {
   }
   
   loadTrack(trackIndex);
-  pauseTrack();
+  playTrack();
 }
 
 function previousTrack() {
@@ -71,20 +75,25 @@ function previousTrack() {
   }
 
   loadTrack(trackIndex);
-  pauseTrack();
+  playTrack();
+}
+
+function setVolume() {
+  audio.volume = volumeSlider.value / 100;
 }
 
 function seekTo() {
-  let slider = document.querySelector(".seek_slider");
-  let seekTime = audio.duration * (slider.value / 100);
+  let seekTime = audio.duration * (seekSlider.value / 100);
   audio.currentTime = seekTime;
 }
 
 audio.addEventListener("timeupdate", () => {
-  let slider = document.querySelector(".seek_slider");
-  let value = (audio.currentTime / audio.duration) * 100;
-  slider.value = value || 0;
+
+  if (!isNaN(audio.duration)) {
+    let value = (audio.currentTime / audio.duration) * 100;
+    seekSlider.value = value
+  }
 });
 
+audio.addEventListener("ended", nextTrack);
 loadTrack(trackIndex);
-
