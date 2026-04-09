@@ -9,7 +9,7 @@ let dateRelease = document.querySelector(".release-date")
 let songDesc = document.querySelector(".description")
 let trackIndex = 0;
 const availableSongs = [
-  {artist: "The Smiths", track: "This Charming Man", date: "1983", file: "ThisCharmingMan.mp3", desc: "An upbeat song about two different people from different working classes and the diversity of them."},
+  {artist: "The Smiths", track: "This Charming Man", date: "1983", file: "ThisCharmingMan.mp3", desc: "An upbeat song about two different people from different working classes."},
   {artist: "Nirvana", track: "About a Girl", date: "1989", file: "AboutAGirl.mp3", desc: "A soft but hearty song."},
   {artist: "Mac Demarco", track: "No Other Heart", date: "2015", file: "NoOtherHeart.mp3", desc: "depression and heartbreak."},
   {artist: "Good Kid", track: "Cicada", date: "2026", file: "04-cicada.mp3", desc: "A song about a crush, ironically this was released the day I got cheated on."},
