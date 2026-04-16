@@ -1,6 +1,5 @@
 let audio = document.getElementById("main-audio")
 let button = document.getElementById("play-pause")
-let playing = false;
 let volumeSlider = document.querySelector(".volume_slider")
 let seekSlider = document.querySelector(".seek_slider")
 let trackName = document.querySelector(".track-name")
@@ -24,16 +23,16 @@ const availableSongs = [
 ]
 
 function loadTrack(index) {
+  audio.pause();
+  audio.currentTime = 0;
   let song = availableSongs[index];
   audio.src = song.file
-  
   trackName.textContent = song.track
   artistName.textContent = song.artist
   dateRelease.textContent = song.date || "Unknown"
   songDesc.textContent = song.desc || "I dont know"
 
   seekSlider.value = 0
-  playing = false
   button.textContent = "▶︎"
 }
 function playPauseTrack() {
@@ -44,17 +43,15 @@ function playPauseTrack() {
 function playTrack() {
   audio.play()
     .then(() => {
-      playing = true;
       button.textContent = "❚❚";
     })
-  .catch(err => {
-    alert("Song failed to load, check the console for errors");
-    console.log(err);
-  });
+    .catch(err => {
+      alert("Song failed to load, check the console for errors");
+      console.log(err);
+    });
 }
 
 function pauseTrack() {
-  playing = false;
   audio.pause();
   button.textContent = "▶︎";
 }
@@ -86,8 +83,10 @@ function setVolume() {
 }
 
 function seekTo() {
-  let seekTime = audio.duration * (seekSlider.value / 100);
-  audio.currentTime = seekTime;
+  if (!isNaN(audio.duration)) {
+    let seekTime = audio.duration * (seekSlider.value / 100);
+    audio.currentTime = seekTime;
+  }
 }
 
 audio.addEventListener("timeupdate", () => {
@@ -100,3 +99,4 @@ audio.addEventListener("timeupdate", () => {
 
 audio.addEventListener("ended", nextTrack);
 loadTrack(trackIndex);
+setVolume();
