@@ -42,11 +42,14 @@ function playPauseTrack() {
 }
 
 function playTrack() {
-  playing = true;
-  button.textContent = "❚❚";
-  audio.play().catch(err => {
-    alert("Failed to load song check console for error")
-    console.log(err)
+  audio.play()
+    then(() => {
+      playing = true;
+      button.textContent = "❚❚";
+    })
+  .catch(err => {
+    alert("Song failed to load, check the console for errors");
+    console.log(err);
   });
 }
 
