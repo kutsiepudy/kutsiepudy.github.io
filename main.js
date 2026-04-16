@@ -37,13 +37,13 @@ function loadTrack(index) {
   button.textContent = "▶︎"
 }
 function playPauseTrack() {
-  if (!playing) playTrack();
+  if (audio.paused) playTrack();
   else pauseTrack()
 }
 
 function playTrack() {
   audio.play()
-    then(() => {
+    .then(() => {
       playing = true;
       button.textContent = "❚❚";
     })
