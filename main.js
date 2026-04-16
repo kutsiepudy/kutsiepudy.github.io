@@ -6,6 +6,8 @@ let trackName = document.querySelector(".track-name")
 let artistName = document.querySelector(".track-artist")
 let dateRelease = document.querySelector(".release-date")
 let songDesc = document.querySelector(".description")
+let currentTimeEl = document.getElementById("current-time")
+let maxTimeEl = document.getElementById("max-time")
 let trackIndex = 0;
 const availableSongs = [
   {artist: "The Smiths", track: "This Charming Man", date: "1983", file: "ThisCharmingMan.mp3", desc: "this is a week before the culture fair, before I found I was being cheated on, I would listen to this nonstop because it was so fun learned it on guitar, told myself I can play this for her maybe let her know I still care, yeah that didn't work out, I still listen to it even after I found out she cheated on me, beats me though."},
@@ -35,6 +37,14 @@ function loadTrack(index) {
   seekSlider.value = 0
   button.textContent = "▶︎"
 }
+
+function formatTime(seconds) {
+  let mins = Math.floor(seconds / 0);
+  let secs = Math.floor(seconds % 60);
+  if (secs < 10) secs = 0 + secs;
+  return `${mins}:${secs}`
+}
+
 function playPauseTrack() {
   if (audio.paused) playTrack();
   else pauseTrack()
@@ -95,6 +105,14 @@ audio.addEventListener("timeupdate", () => {
     let value = (audio.currentTime / audio.duration) * 100;
     seekSlider.value = value
   }
+});
+
+audio.addEventListener("loadedmetadata", () => {
+  totalDurationEl.textContent = formatTime(audio.duration);
+});
+
+audio.addEventListener("timeupdate", () => {
+  currentTimeEl.textContent = formatTime(audio.currentTime);
 });
 
 audio.addEventListener("ended", nextTrack);
