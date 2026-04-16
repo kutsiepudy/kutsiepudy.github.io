@@ -36,12 +36,14 @@ function loadTrack(index) {
 
   seekSlider.value = 0
   button.textContent = "▶︎"
+  currentTimeEl.textContent = "0:00";
+  maxTimeEl.textContent = "0:00";
 }
 
 function formatTime(seconds) {
-  let mins = Math.floor(seconds / 0);
+  let mins = Math.floor(seconds / 60);
   let secs = Math.floor(seconds % 60);
-  if (secs < 10) secs = 0 + secs;
+  if (secs < 10) secs = "0" + secs;
   return `${mins}:${secs}`
 }
 
@@ -108,7 +110,7 @@ audio.addEventListener("timeupdate", () => {
 });
 
 audio.addEventListener("loadedmetadata", () => {
-  totalDurationEl.textContent = formatTime(audio.duration);
+  maxTimeEl.textContent = formatTime(audio.duration);
 });
 
 audio.addEventListener("timeupdate", () => {
