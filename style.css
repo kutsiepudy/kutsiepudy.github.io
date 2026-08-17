@@ -1,16 +1,17 @@
 @font-face {
   font-family: "kuromi-font";
-  src: url("fonts/kuromi-font.woff") format(woff);
+  src: url("fonts/kuromi-font.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
-:root {
+:root{
   --gap: 1rem;
-  --title-padding: 1.25rem;
-  --title-radius: 8px;
+  --tile-padding: 1.25rem;
+  --tile-radius: 8px;
   --max-width: 900px;
+}
 
 body {
   font-family: "kuromi-font", system-ui, sans-serif;
@@ -22,19 +23,22 @@ body {
   justify-content: center;
 }
 
+/* page container */
 main {
   width: 100%;
-  max-width: var(--max-width)
+  max-width: var(--max-width);
 }
 
+/* grid for links: 2 columns on desktop, 1 on small screens */
 .links-grid {
   display: grid;
-  grid-template-columns: 1fr, 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: var(--gap);
   align-items: stretch;
-  margin-bottom: 1.5mm;
+  margin-bottom: 1.5rem;
 }
 
+/* base tile styles */
 .tile {
   display: flex;
   align-items: center;
@@ -51,6 +55,7 @@ main {
   background-clip: padding-box;
 }
 
+/* hover / focus */
 .tile:hover,
 .tile:focus {
   transform: translateY(-3px);
@@ -58,35 +63,57 @@ main {
   box-shadow: 0 8px 18px rgba(0,0,0,0.12);
 }
 
+/* accessible focus ring */
 .tile:focus-visible {
   box-shadow: 0 0 0 4px rgba(0,0,0,0.12), 0 8px 18px rgba(0,0,0,0.12);
 }
 
+/* individual tile visuals (keeping your existing imagery where possible) */
 #audio-player {
+  background-color: cyan;
+  border-image-source: url("crk-border.png");
+  border-image-slice: 30;
+  border-image-repeat: repeat;
+}
+
+#game {
   background-color: white;
-  border: 3px solid transparent;
   border-image-source: url("little-border.png");
+  border-image-slice: 30;
   border-image-repeat: repeat;
 }
 
 #deltarune {
   background-color: black;
   color: white;
-  border: 3px solid transparent;
   border-image-source: url("deltarune.png");
+  border-image-slice: 30;
   border-image-repeat: repeat;
 }
 
-#game {
-  background-color: cyan;
-  border: 3px solid transparent;
-  border-image-source: url("crk-border.png");
-  border-image-repeat: repeat;
+#github {
+  background-color: #ffe4f2;
+  color: #222;
+  border: 3px dashed rgba(0,0,0,0.08);
+}
+
+/* about section */
+#about-wrapper {
+  text-align: center;
 }
 
 #about {
+  display: inline-block;
+  padding: 1rem;
   background-color: purple;
   color: white;
-  border: 3px solid transparent;
-  border-image: url("kuromi.png");
+  border-radius: 8px;
+  max-width: 800px;
+}
+
+/* responsive: stack tiles on small screens */
+@media (max-width: 600px) {
+  .links-grid {
+    grid-template-columns: 1fr;
+  }
 }
