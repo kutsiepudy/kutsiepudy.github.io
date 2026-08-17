@@ -27,7 +27,7 @@ body {
   border-image-repeat: repeat;
 }
 
-#audio-player {
+#game {
   background-color: cyan;
   border: 3px solid transparent;
   border-image-source: url("crk-border.png");
