@@ -1,0 +1,12 @@
+@font-face {
+  font-family: "kuromi-font";
+  src: url("fonts/kuromi-font.woff") format(woff);
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: "kuromi-font";
+  background-image: url("Pumpkin-Pie.png");
+}
