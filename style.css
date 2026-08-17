@@ -15,7 +15,7 @@ body {
 #audio-player {
   background-color: white;
   border: 3px solid transparent;
-  border-image-source: url("little-border");
+  border-image-source: url("little-border.png");
   border-image-repeat: repeat;
 }
 
@@ -23,14 +23,14 @@ body {
   background-color: black;
   color: white;
   border: 3px solid transparent;
-  border-image-source: url("deltarune");
+  border-image-source: url("deltarune.png");
   border-image-repeat: repeat;
 }
 
 #audio-player {
   background-color: cyan;
   border: 3px solid transparent;
-  border-image-source: url("crk-border");
+  border-image-source: url("crk-border.png");
   border-image-repeat: repeat;
 }
 
@@ -38,5 +38,5 @@ body {
   background-color: purple;
   color: white;
   border: 3px solid transparent;
-  border-image: url("kuromi");
+  border-image: url("kuromi.png");
 }
