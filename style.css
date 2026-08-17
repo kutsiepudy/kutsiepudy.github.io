@@ -6,10 +6,60 @@
   font-display: swap;
 }
 
+:root {
+  --gap: 1rem;
+  --title-padding: 1.25rem;
+  --title-radius: 8px;
+  --max-width: 900px;
+
 body {
-  font-family: "kuromi-font";
+  font-family: "kuromi-font", system-ui, sans-serif;
   background-color: pink;
   background-image: url("Pumpkin-Pie.png");
+  margin: 0;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  width: 100%;
+  max-width: var(--max-width)
+}
+
+.links-grid {
+  display: grid;
+  grid-template-columns: 1fr, 1fr;
+  gap: var(--gap);
+  align-items: stretch;
+  margin-bottom: 1.5mm;
+}
+
+.tile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--tile-padding);
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  border: 3px solid transparent;
+  border-radius: var(--tile-radius);
+  font-weight: 700;
+  transition: transform 150ms ease, box-shadow 150ms ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+  background-clip: padding-box;
+}
+
+.tile:hover,
+.tile:focus {
+  transform: translateY(-3px);
+  outline: none;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+}
+
+.tile:focus-visible {
+  box-shadow: 0 0 0 4px rgba(0,0,0,0.12), 0 8px 18px rgba(0,0,0,0.12);
 }
 
 #audio-player {
