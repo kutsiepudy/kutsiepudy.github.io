@@ -23,13 +23,11 @@ body {
   justify-content: center;
 }
 
-/* page container */
 main {
   width: 100%;
   max-width: var(--max-width);
 }
 
-/* grid for links: 2 columns on desktop, 1 on small screens */
 .links-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -38,7 +36,6 @@ main {
   margin-bottom: 1.5rem;
 }
 
-/* base tile styles */
 .tile {
   display: flex;
   align-items: center;
@@ -55,7 +52,6 @@ main {
   background-clip: padding-box;
 }
 
-/* hover / focus */
 .tile:hover,
 .tile:focus {
   transform: translateY(-3px);
@@ -63,12 +59,10 @@ main {
   box-shadow: 0 8px 18px rgba(0,0,0,0.12);
 }
 
-/* accessible focus ring */
 .tile:focus-visible {
   box-shadow: 0 0 0 4px rgba(0,0,0,0.12), 0 8px 18px rgba(0,0,0,0.12);
 }
 
-/* individual tile visuals (keeping your existing imagery where possible) */
 #audio-player {
   background-color: cyan;
   border-image-source: url("crk-border.png");
@@ -97,7 +91,6 @@ main {
   border: 3px dashed rgba(0,0,0,0.08);
 }
 
-/* about section */
 #about-wrapper {
   text-align: center;
 }
