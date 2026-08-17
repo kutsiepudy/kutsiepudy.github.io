@@ -8,5 +8,35 @@
 
 body {
   font-family: "kuromi-font";
+  background-color: pink;
   background-image: url("Pumpkin-Pie.png");
+}
+
+#audio-player {
+  background-color: white;
+  border: 3px solid transparent;
+  border-image-source: url("little-border");
+  border-image-repeat: repeat;
+}
+
+#deltarune {
+  background-color: black;
+  color: white;
+  border: 3px solid transparent;
+  border-image-source: url("deltarune");
+  border-image-repeat: repeat;
+}
+
+#audio-player {
+  background-color: cyan;
+  border: 3px solid transparent;
+  border-image-source: url("crk-border");
+  border-image-repeat: repeat;
+}
+
+#about {
+  background-color: purple;
+  color: white;
+  border: 3px solid transparent;
+  border-image: url("kuromi");
 }
