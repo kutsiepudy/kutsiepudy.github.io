@@ -65,24 +65,24 @@ main {
 
 #audio-player {
   background-color: cyan;
-  border-image-source: url("crk-border.png");
-  border-image-slice: 30;
-  border-image-repeat: repeat;
+  background-image: url("crk-border.png");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 #game {
   background-color: white;
-  border-image-source: url("little-border.png");
-  border-image-slice: 30;
-  border-image-repeat: repeat;
+  background-image: url("little-border.png");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 #deltarune {
   background-color: black;
   color: white;
-  border-image-source: url("deltarune.png");
-  border-image-slice: 30;
-  border-image-repeat: repeat;
+  background-image: url("deltarune.png");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 #github {
