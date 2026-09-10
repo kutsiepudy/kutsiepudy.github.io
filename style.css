@@ -115,10 +115,6 @@ html, body, a, button {
   cursor: none !important;
 }
 
-html, body, a, button {
-  cursor: none !important;
-}
-
 .cursor-container {
   position: fixed;
   top: 0;
