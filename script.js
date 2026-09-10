@@ -16,3 +16,43 @@ const detectDevice = () {
 console.log(detectDevice());
 
 console.log("well you found the DOOM game")
+
+
+const cursor = document.getElementById("PumpkinPieCookie");
+const cursorAsset = document.getElementById("cursorAsset");
+const idle = "pumpkinPieCookieIdle.png";
+const hover = "pumpkinPieCookieLaugh.gif";
+const click = "explosion.gif"
+
+let isHoveringLink = false;
+
+document.addEventListener('mousemove', (e) => {
+  cursor.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0)`;
+  if (!isHoveringLink && !document.querySelector(".cursor-container.is-clicking")) {
+    cursorAsset.src = idle;
+  }
+});
+
+document.addEventListener('mousedown', () => {
+  cursor.classList.add('is-clicking');
+  cursorAsset.src = click;
+});
+
+document.addEventListener('mouseup', () => {
+  cursor.classList.remove('is-clicking');
+  cursorAsset.src = isHoveringLink ? hover : idle;
+});
+
+const links = document.querySelectorAll('.hover-link');
+
+links.forEach(link => {
+  link.addEventListener('mouseenter', () => {
+    isHoveringLink = true;
+    cursorAsset.src = hover;
+  });
+
+  link.addEventListener('mouseleave', () => {
+    isHoveringLink = false;
+    cursorAsset.src = idle;
+  });
+});
