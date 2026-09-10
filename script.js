@@ -1,10 +1,10 @@
-doomLink = "https://ustymukhman.github.io/WebDOOM/public/"
+const doomLink = "https://ustymukhman.github.io/WebDOOM/public/"
 
 console.log("STOP PEAKING!")
 
-const detectDevice = () {
+const detectDevice = () => {
 
-  const isMobileScreen = window.matchMedia("(max-width: 1024px)").matches;
+  const isMobileScreen = window.matchMedia("(max-width: 1180px)").matches;
   const isTouchScreen = window.matchMedia("(pointer: coarse)").matches || ('ontouchstart' in window);
 
   if (isMobileScreen && isTouchScreen) {
