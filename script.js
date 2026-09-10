@@ -20,9 +20,9 @@ console.log("well you found the DOOM game")
 
 const cursor = document.getElementById("PumpkinPieCookie");
 const cursorAsset = document.getElementById("cursorAsset");
-const idle = "pumpkinPieCookieIdle.png";
-const hover = "pumpkinPieCookieLaugh.gif";
-const click = "explosion.gif"
+const idle = "cursor/pumpkinPieCookieIdle.png";
+const hover = "cursor/pumpkinPieCookieLaugh.gif";
+const click = "cursor/explosion.gif"
 
 let isHoveringLink = false;
 
