@@ -14,7 +14,7 @@ const detectDevice = () {
 }
 
 console.log(detectDevice());
-
+console.log(doomLink)
 console.log("well you found the DOOM game")
 
 
