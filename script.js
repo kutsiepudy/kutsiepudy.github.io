@@ -4,8 +4,8 @@ console.log("STOP PEAKING!")
 
 const detectDevice = () {
 
-  const isMobileScreen = window.watchMedia("(max-width: 1024px)").matches;
-  const isTouchScreen = window.watchMedia("(pointer: coarse)").matches || ('ontouchstart' in window);
+  const isMobileScreen = window.matchMedia("(max-width: 1024px)").matches;
+  const isTouchScreen = window.matchMedia("(pointer: coarse)").matches || ('ontouchstart' in window);
 
   if (isMobileScreen && isTouchScreen) {
     return "Are you on Mobile?"
@@ -43,7 +43,7 @@ document.addEventListener('mouseup', () => {
   cursorAsset.src = isHoveringLink ? hover : idle;
 });
 
-const links = document.querySelectorAll('.hover-link');
+const links = document.querySelectorAll('.tile');
 
 links.forEach(link => {
   link.addEventListener('mouseenter', () => {
