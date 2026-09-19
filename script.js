@@ -27,7 +27,7 @@ const click = "cursor/explosion.gif"
 let isHoveringLink = false;
 
 document.addEventListener('mousemove', (e) => {
-  cursor.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0)`;
+  cursor.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0) translate(-50%, -50%)`;
   if (!isHoveringLink && !document.querySelector(".cursor-container.is-clicking")) {
     cursorAsset.src = idle;
   }
