@@ -5,38 +5,37 @@ const idle = "cursor/pumpkinPieCookieIdle.png";
 const hover = "cursor/pumpkinPieCookieLaugh.gif";
 const click = "cursor/explosion.gif"
 let isHoveringLink = false;
-let countdown = 60
-let second = 0
+let countdown = 60;
+let second = 0;
+let spamTimed = 0;
 const intervalId = setInterval(() => {
   countdown--;
-  
+
   if (countdown < 0) {
     console.log("what are you still doing here...");
-    clearInterval(intervalId)
+    clearInterval(intervalId);
+
+    const breakdown = setInterval(() => {
+      second++;
+      console.log(`${second}`);
+
+      if (second > 70) {
+        console.log("JUST STOP PEEKING, THIS IS PRIVATE");
+        clearInterval(breakdown);
+
+        const spam = setInterval(() => {
+          spamTimed++;
+          console.log("STOP");
+
+          if (spamTimed > 20) {
+            console.log("fine, here's a clue... Love finds its way");
+            clearInterval(spam);
+          }
+        }, 1000);
+      }
+    }, 1000);
   }
 }, 1000);
-
-const breakdown = setInterval(() => {
-  second++;
-  console.log(`${second}`)
-
-  if (second > 70) {
-    console.log("JUST STOP PEEKING, THIS IS PRIVATE");
-    clearInterval(breakdown);
-  }
-}, 1000);
-
-let spamTimed = 0
-
-const spam = setInterval(() => {
-  spamTimed++;
-  console.log("STOP");
-
-  if (spamTimed > 20) {
-    console.log("fine, here's a clue... Love finds its way");
-    clearInterval(spam);
-  }
-}, 1000)
 
 console.log("STOP PEAKING!")
 
