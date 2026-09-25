@@ -1,4 +1,19 @@
 const doomLink = "https://ustymukhman.github.io/WebDOOM/public/"
+const cursor = document.getElementById("PumpkinPieCookie");
+const cursorAsset = document.getElementById("cursorAsset");
+const idle = "cursor/pumpkinPieCookieIdle.png";
+const hover = "cursor/pumpkinPieCookieLaugh.gif";
+const click = "cursor/explosion.gif"
+let isHoveringLink = false;
+let countdown = 60
+const intervalId = setInterval(() => {
+  countdown--;
+  
+  if (countdown < 0) {
+    console.log("what are you still doing here...");
+    clearInterval(intervalId)
+  }
+}, 1000);
 
 console.log("STOP PEAKING!")
 
@@ -16,15 +31,6 @@ const detectDevice = () => {
 console.log(detectDevice());
 console.log(doomLink)
 console.log("well you found the DOOM game")
-
-
-const cursor = document.getElementById("PumpkinPieCookie");
-const cursorAsset = document.getElementById("cursorAsset");
-const idle = "cursor/pumpkinPieCookieIdle.png";
-const hover = "cursor/pumpkinPieCookieLaugh.gif";
-const click = "cursor/explosion.gif"
-
-let isHoveringLink = false;
 
 document.addEventListener('mousemove', (e) => {
   cursor.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0) translate(-50%, -50%)`;
