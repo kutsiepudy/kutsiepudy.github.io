@@ -34,6 +34,7 @@ const spam = setInterval(() => {
 
   if (spamTimed > 20) {
     console.log("fine, here's a clue... Love finds its way");
+    clearInterval(spam);
   }
 }, 1000)
 
