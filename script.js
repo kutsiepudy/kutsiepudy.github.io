@@ -6,6 +6,7 @@ const hover = "cursor/pumpkinPieCookieLaugh.gif";
 const click = "cursor/explosion.gif"
 let isHoveringLink = false;
 let countdown = 60
+let second = 0
 const intervalId = setInterval(() => {
   countdown--;
   
@@ -14,6 +15,27 @@ const intervalId = setInterval(() => {
     clearInterval(intervalId)
   }
 }, 1000);
+
+const breakdown = setInterval(() => {
+  second++;
+  console.log(`${second}`)
+
+  if (second > 70) {
+    console.log("JUST STOP PEEKING, THIS IS PRIVATE");
+    clearInterval(breakdown);
+  }
+}, 1000);
+
+let spamTimed = 0
+
+const spam = setInterval(() => {
+  spamTimed++;
+  console.log("STOP");
+
+  if (spamTimed > 20) {
+    console.log("fine, here's a clue... Love finds its way");
+  }
+}, 1000)
 
 console.log("STOP PEAKING!")
 
