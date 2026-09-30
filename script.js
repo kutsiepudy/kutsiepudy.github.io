@@ -6,7 +6,7 @@ const hover = "cursor/pumpkinPieCookieLaugh.gif";
 const click = "cursor/explosion.gif"
 let isHoveringLink = false;
 let countdown = 60;
-let second = 0;
+let second = 60;
 let spamTimed = 0;
 const intervalId = setInterval(() => {
   countdown--;
